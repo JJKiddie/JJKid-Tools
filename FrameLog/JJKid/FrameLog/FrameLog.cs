@@ -17,7 +17,7 @@ namespace JJKid.Log
             fileName = fileName.Substring(fileName.LastIndexOf('\\') + 1);
             fileName = fileName.Replace(".cs", "");
 
-            UnityEngine.Debug.Log("F " + FrameInfo.FrameNo.ToString()
+            UnityEngine.Debug.Log("F " + UnityEngine.Time.frameCount.ToString()
                                   + " [" + fileName + "# " + callerMemberName
                                   + ": " + callerLineNum.ToString() + "] " + msg);
 #else
@@ -36,7 +36,7 @@ namespace JJKid.Log
 
             fileName = fileName.Substring(fileName.LastIndexOf('\\') + 1);
             fileName = fileName.Replace(".cs", "");
-            UnityEngine.Debug.Log("F " + FrameInfo.FrameNo.ToString()
+            UnityEngine.Debug.Log("F " + UnityEngine.Time.frameCount.ToString()
                                   + " [" + fileName + "# " + frame.GetMethod().Name
                                   + ": " + frame.GetFileLineNumber() + "] " + msg);
 #else
