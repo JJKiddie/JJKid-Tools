@@ -21,7 +21,7 @@ namespace JJKid.Log
                                   + " [" + fileName + "# " + callerMemberName
                                   + ": " + callerLineNum.ToString() + "] " + msg);
 #else
-            UnityEngine.Debug.Log("F " + FrameInfo.FrameNo.ToString()
+            UnityEngine.Debug.Log("F " + UnityEngine.Time.frameCount.ToString()
                                   + "[#] " + msg);
 #endif
         }
@@ -40,7 +40,7 @@ namespace JJKid.Log
                                   + " [" + fileName + "# " + frame.GetMethod().Name
                                   + ": " + frame.GetFileLineNumber() + "] " + msg);
 #else
-            UnityEngine.Debug.Log("F " + FrameInfo.FrameNo.ToString()
+            UnityEngine.Debug.Log("F " + UnityEngine.Time.frameCount.ToString()
                                   + "[#] " + msg);
 #endif
         }
